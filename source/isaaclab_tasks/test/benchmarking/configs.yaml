@@ -4,6 +4,30 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 
+# Quick installation smoketest (~3 min, 3 tasks).
+smoketest:
+  rsl_rl:Isaac-Cartpole-Direct-v0:
+    max_iterations: 100
+    lower_thresholds:
+      reward: 280
+      episode_length: 250
+    upper_thresholds:
+      duration: 300
+  rsl_rl:Isaac-Cartpole-v0:
+    max_iterations: 100
+    lower_thresholds:
+      reward: 3
+      episode_length: 100
+    upper_thresholds:
+      duration: 300
+  rsl_rl:Isaac-Velocity-Flat-H1-v0:
+    max_iterations: 50
+    lower_thresholds:
+      reward: -6
+      episode_length: -99999
+    upper_thresholds:
+      duration: 600
+
 # mode for very simple functional testing without checking thresholds
 fast_test:
   rl_games:Isaac-Ant-v0:
