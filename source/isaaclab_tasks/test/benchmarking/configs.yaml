@@ -6,10 +6,10 @@
 
 # Quick installation smoketest (~3 min, 3 tasks).
 smoketest:
-  rsl_rl:Isaac-Cartpole-Direct-v0:
+  rl_games:Isaac-Cartpole-Direct-v0:
     max_iterations: 100
     lower_thresholds:
-      reward: 280
+      reward: 250
       episode_length: 250
     upper_thresholds:
       duration: 300
@@ -18,6 +18,13 @@ smoketest:
     lower_thresholds:
       reward: 3
       episode_length: 100
+    upper_thresholds:
+      duration: 300
+  rsl_rl:Isaac-Smoketest-Camera-Direct-v0:
+    max_iterations: 50
+    lower_thresholds:
+      reward: 10
+      episode_length: -99999
     upper_thresholds:
       duration: 300
   rsl_rl:Isaac-Velocity-Flat-H1-v0:
